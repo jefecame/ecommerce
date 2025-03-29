@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Producto</title>
+</head>
+
+<body>
+
+    <header class="inset-x-0 top-0 z-50 py-6">
+        <div class="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
+            <nav class="w-full flex justify-between gap-6 relative">
+                <!-- logo -->
+                <div class="min-w-max inline-flex relative">
+                    <a href="/" class="relative flex items-center gap-3">
+                        <div class="relative w-7 h-7 overflow-hidden flex rounded-xl">
+                            <span class="absolute w-4 h-4 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
+                            <span class="absolute w-4 h-4 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
+                            <span class="absolute w-4 h-4 -bottom-1 -left-1 bg-blue-600 rounded-md rotate-45"></span>
+                            <span
+                                class="absolute w-2 h-2 rounded-full bg-gray-900 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
+                        </div>
+                        <div class="inline-flex text-lg font-semibold text-gray-900">
+                            Ecommerce
+                        </div>
+                    </a>
+                </div>
+
+                <div data-nav-overlay aria-hidden="true"
+                    class="fixed hidden inset-0 lg:!hidden bg-gray-800/60 bg-opacity-50 backdrop-filter backdrop-blur-xl">
+                </div>
+                <div data-navbar
+                    class="flex invisible opacity-0  translate-y-10 overflow-hidden lg:visible lg:opacity-100  lg:-translate-y-0 lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-white lg:!bg-transparent border-x border-x-gray-100 lg:border-x-0">
+                    <ul
+                        class="border-t border-gray-100  lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-gray-700 w-full lg:justify-center lg:items-center">
+                        <li>
+                            <a href="#" class="duration-300 font-medium ease-linear hover:text-blue-600 py-3">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/productos" class="duration-300 font-medium ease-linear hover:text-blue-600 py-3">
+                                Productos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="duration-300 font-medium ease-linear hover:text-blue-600 py-3">
+                                Opiniones
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div
+                        class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-gray-100   lg:border-0 px-6 lg:px-0">
+                        <a href="#"
+                            class="flex justify-center items-center w-full sm:w-max px-6 h-12 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
+                        after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]">
+                            <span class="relative z-10 text-white">
+                                Iniciar Sesión
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="min-w-max flex items-center gap-x-3">
+
+                    <button data-toggle-navbar data-is-open="false"
+                        class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
+                        <span id="line-1"
+                            class="w-6 h-0.5 rounded-full bg-gray-700 transition-all duration-300 ease-linear"></span>
+                        <span id="line-2"
+                            class="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-gray-700 transition-all duration-300 ease-linear"></span>
+                        <span id="line-3"
+                            class="w-6 mt-1 h-0.5 rounded-ful bg-gray-700 transition-all duration-300 ease-linear"></span>
+                        <span class="sr-only">togglenav</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="text-gray-700 body-font overflow-hidden bg-white">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
+                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                    <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
+                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
+                    <div class="flex mb-4">
+                        <span class="flex items-center">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            <span class="text-gray-600 ml-3">4 Reviews</span>
+                        </span>
+                        <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
+                            <a class="text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-2 text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="ml-2 text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                    <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha
+                        taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage
+                        brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle
+                        pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+                    <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
+                        <div class="flex">
+                            <span class="mr-3">Color</span>
+                            <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
+                            <button
+                                class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
+                            <button
+                                class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                        </div>
+                        <div class="flex ml-6 items-center">
+                            <span class="mr-3">Size</span>
+                            <div class="relative">
+                                <select
+                                    class="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10">
+                                    <option>SM</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                                <span
+                                    class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
+                        <button
+                            class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Button</button>
+                        <button
+                            class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white">
+        <div class="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8">
+            <div class="flex items-center justify-between px-4 sm:px-6 lg:px-0">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900">Trending products</h2>
+                <a href="#" class="hidden text-sm font-semibold text-blue-600 hover:text-cyan-500 sm:block">
+                    Search more
+                    <span aria-hidden="true"> &rarr;</span>
+                </a>
+            </div>
+
+            <div class="relative mt-8">
+                <div class="relative -mb-6 w-full overflow-x-auto pb-6">
+                    <ul role="list"
+                        class="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0">
+                        <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                            <div class="group relative">
+                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                                    <img src="https://m.media-amazon.com/images/I/61bG3pY7k-L.jpg"
+                                        alt="Black machined steel pen with hexagonal grip and small white logo at top."
+                                        class="h-full w-full object-cover object-center group-hover:opacity-75">
+                                </div>
+                                <div class="mt-6">
+                                    <p class="text-sm text-gray-500">Black</p>
+                                    <h3 class="mt-1 font-semibold text-gray-900">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Prime drink
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-gray-900">$3</p>
+                                </div>
+                            </div>
+
+                            <h4 class="sr-only">Available colors</h4>
+                            <ul role="list" class="mt-auto flex items-center justify-center space-x-3 pt-6">
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #111827">
+                                    <span class="sr-only">Black</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #fde68a">
+                                    <span class="sr-only">Brass</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #e5e7eb">
+                                    <span class="sr-only">Chrome</span>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                            <div class="group relative">
+                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                                    <img src="https://m.media-amazon.com/images/I/61bG3pY7k-L.jpg"
+                                        alt="Black machined steel pen with hexagonal grip and small white logo at top."
+                                        class="h-full w-full object-cover object-center group-hover:opacity-75">
+                                </div>
+                                <div class="mt-6">
+                                    <p class="text-sm text-gray-500">Black</p>
+                                    <h3 class="mt-1 font-semibold text-gray-900">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Prime drink
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-gray-900">$3</p>
+                                </div>
+                            </div>
+
+                            <h4 class="sr-only">Available colors</h4>
+                            <ul role="list" class="mt-auto flex items-center justify-center space-x-3 pt-6">
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #111827">
+                                    <span class="sr-only">Black</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #fde68a">
+                                    <span class="sr-only">Brass</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #e5e7eb">
+                                    <span class="sr-only">Chrome</span>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                            <div class="group relative">
+                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                                    <img src="https://m.media-amazon.com/images/I/61bG3pY7k-L.jpg"
+                                        alt="Black machined steel pen with hexagonal grip and small white logo at top."
+                                        class="h-full w-full object-cover object-center group-hover:opacity-75">
+                                </div>
+                                <div class="mt-6">
+                                    <p class="text-sm text-gray-500">Black</p>
+                                    <h3 class="mt-1 font-semibold text-gray-900">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Prime drink
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-gray-900">$3</p>
+                                </div>
+                            </div>
+
+                            <h4 class="sr-only">Available colors</h4>
+                            <ul role="list" class="mt-auto flex items-center justify-center space-x-3 pt-6">
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #111827">
+                                    <span class="sr-only">Black</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #fde68a">
+                                    <span class="sr-only">Brass</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #e5e7eb">
+                                    <span class="sr-only">Chrome</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                            <div class="group relative">
+                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                                    <img src="https://m.media-amazon.com/images/I/61bG3pY7k-L.jpg"
+                                        alt="Black machined steel pen with hexagonal grip and small white logo at top."
+                                        class="h-full w-full object-cover object-center group-hover:opacity-75">
+                                </div>
+                                <div class="mt-6">
+                                    <p class="text-sm text-gray-500">Black</p>
+                                    <h3 class="mt-1 font-semibold text-gray-900">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Prime drink
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-gray-900">$3</p>
+                                </div>
+                            </div>
+
+                            <h4 class="sr-only">Available colors</h4>
+                            <ul role="list" class="mt-auto flex items-center justify-center space-x-3 pt-6">
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #111827">
+                                    <span class="sr-only">Black</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #fde68a">
+                                    <span class="sr-only">Brass</span>
+                                </li>
+                                <li class="h-4 w-4 rounded-full border border-black border-opacity-10"
+                                    style="background-color: #e5e7eb">
+                                    <span class="sr-only">Chrome</span>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <!-- More products... -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 flex px-4 sm:hidden">
+                <a href="#" class="text-sm font-semibold text-blue-600 hover:text-cyan-500">
+                    Search more
+                    <span aria-hidden="true"> &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex items-end w-full bg-white">
+
+        <footer class="w-full text-gray-700 bg-gray-100 body-font">
+            <div
+                class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+                <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+                    <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+                        <svg class="w-auto h-5 text-gray-900 fill-current" viewBox="0 0 202 69"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M57.44.672s6.656 1.872 6.656 5.72c0 0-1.56 2.6-3.744 6.552 8.424 1.248 16.744 1.248 23.816-1.976-1.352 7.904-12.688 8.008-26.208 6.136-7.696 13.624-19.656 36.192-19.656 42.848 0 .416.208.624.52.624 4.576 0 17.888-14.352 21.112-18.824 1.144-1.456 4.264.728 3.12 2.392C56.608 53.088 42.152 69 36.432 69c-4.472 0-8.216-5.928-8.216-10.4 0-6.552 11.752-28.08 20.28-42.952-9.984-1.664-20.176-3.64-27.976-3.848-13.936 0-16.64 3.536-17.576 6.032-.104.312-.52.52-.832.312-3.744-7.072-1.456-14.56 14.144-14.56 9.36 0 22.048 4.576 34.944 7.592C54.736 5.04 57.44.672 57.44.672zm46.124 41.08c1.144-1.456 4.264.728 3.016 2.392C100.236 53.088 85.78 69 80.06 69c-4.576 0-8.32-5.928-8.32-10.4v-.208C67.58 64.32 63.524 69 61.34 69c-4.472 0-8.944-4.992-8.944-11.856 0-10.608 15.704-33.072 24.96-33.072 4.992 0 7.384 2.392 8.528 4.576l2.6-4.576s6.656 1.976 6.656 5.824c0 0-13.312 24.336-13.312 30.056 0 .208 0 .624.52.624 4.472 0 17.888-14.352 21.216-18.824zm-40.56 18.72c2.184 0 11.752-13.312 17.368-22.048l4.16-7.488c-8.008-7.904-27.248 29.536-21.528 29.536zm57.564-38.168c-2.184 0-4.992-2.808-4.992-4.784 0-2.912 5.824-14.872 7.28-14.872 2.6 0 6.136 2.808 6.136 6.344 0 2.08-7.176 12.064-8.424 13.312zm-17.68 46.592c-4.472 0-8.216-5.928-8.216-10.4 0-6.656 16.744-34.528 16.744-34.528s6.552 1.976 6.552 5.824c0 0-13.312 24.336-13.312 30.056 0 .208.104.624.624.624 4.472 0 17.888-14.352 21.112-18.824 1.144-1.456 4.264.728 3.12 2.392-6.448 8.944-20.904 24.856-26.624 24.856zM147.244.672s6.656 1.872 6.656 5.72c0 0-25.792 43.784-25.792 53.56 0 .416.208.624.52.624 4.576 0 17.888-14.352 21.112-18.824 1.144-1.456 4.264.728 3.12 2.392C146.412 53.088 131.956 69 126.236 69c-4.472 0-8.216-5.928-8.216-10.4 0-10.4 29.224-57.928 29.224-57.928zM169.7 60.16c3.848-2.392 7.904-6.864 10.816-10.92 6.656-9.464 11.544-20.696 10.504-27.352-.312-3.432-.104-4.056 3.12-2.704 5.2 2.392 11.336 8.632 2.184 22.88-5.2 8.008-12.48 15.288-19.344 19.76-2.704 1.768-6.344 3.328-9.984 4.16-.52.416-1.04.728-1.456.936-1.872 1.352-4.264 2.08-7.592 2.08-14.664 0-16.848-12.272-16.848-16.016 0-2.392 3.224-4.68 4.784-3.744.208.104.312.416.312.624 0 2.808 1.872 13.104 9.984 13.104 7.904 0 3.432-18.304 2.288-27.144-1.456 2.288-3.432 4.992-5.616 8.32-2.6 3.744-5.72 1.456-4.784 0 5.824-8.424 9.152-13.832 11.856-18.616 1.248-2.08 3.328-3.328 6.448-3.328 2.704 0 5.824 3.016 6.864 4.784.312.52 0 1.04-.52 1.144a5.44 5.44 0 00-4.368 5.408c0 6.968 2.6 17.16 1.664 24.856l-.312 1.768z"
+                                fill-rule="nonzero" />
+                        </svg>
+                    </a>
+                    <p class="mt-2 text-sm text-gray-500">Design, Code and Ship!</p>
+                    <div class="mt-4">
+                        <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                            <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path stroke="none"
+                                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                    </path>
+                                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+                    <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                        <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About
+                        </h2>
+                        <nav class="mb-10 list-none">
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                        <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Support
+                        </h2>
+                        <nav class="mb-10 list-none">
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Contact Support</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Help Resources</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Release Updates</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                        <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Platform
+                        </h2>
+                        <nav class="mb-10 list-none">
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                        <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Contact
+                        </h2>
+                        <nav class="mb-10 list-none">
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Send a Message</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                            </li>
+                            <li class="mt-3">
+                                <a class="text-gray-500 cursor-pointer hover:text-gray-900">+123-456-7890</a>
+                            </li>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-300">
+                <div class="container px-5 py-4 mx-auto">
+                    <p class="text-sm text-gray-700 capitalize xl:text-center">© 2020 All rights reserved </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
