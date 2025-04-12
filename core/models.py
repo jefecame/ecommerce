@@ -19,11 +19,15 @@ class Colores(models.Model):
 
 class Tamanos(models.Model):
     id = models.AutoField(primary_key=True)    
-    tamano = models.Choices(
+    tamano = models.CharField(
+        max_length=2,
+        choices=[
         ('S', 'Pequeño'),
         ('M', 'Mediano'),
         ('L', 'Grande'),
-        ('XL', 'Extra Grande'),
+        ('XL', 'Extra Grande')
+        ],
+        default='M',
     )
 
 class VarianteProductos(models.Model):
@@ -42,11 +46,15 @@ class Ordenes(models.Model):
     direccion_envio = models.TextField()
     precio_total = models.DecimalField(max_digits=10, decimal_places=2)
     fecha_orden = models.DateTimeField(auto_now_add=True)
-    status = models.Choices(
-        ('P', 'Pendiente'),
-        ('C', 'Completada'),
-        ('E', 'Enviada'),
-        ('A', 'Anulada'),
+    status = models.CharField(
+        max_length=1,
+        choices=[
+            ('P', 'Pendiente'),
+            ('C', 'Completada'),
+            ('E', 'Enviada'),
+            ('A', 'Anulada'),
+        ],
+        default='P',
     )
 
 class ItemsOrdenes(models.Model):
@@ -55,3 +63,4 @@ class ItemsOrdenes(models.Model):
     variante_producto_id = models.ForeignKey(VarianteProductos, on_delete=models.CASCADE, related_name='items')
     cantidad = models.PositiveIntegerField()
     precio_unitario = models.DecimalField(max_digits=10, decimal_places=2)
+
